@@ -14,7 +14,7 @@ const FetchItems = () => {
     const signal = controller.signal;
 
     dispatch(fetchStatusActions.markFetchingStarted());
-    fetch("https://myntra-backend-mn2a.onrender.com", { signal })
+    fetch("https://myntra-backend-mn2a.onrender.com/items", { signal })
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(fetchStatusActions.markFetchDone());
